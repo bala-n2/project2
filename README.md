@@ -11,17 +11,20 @@ games/
   math-castle-quest.html
   number-guessing-game.html
   rock-paper-scissors.html
+  sheep-dash.html
 scripts/
   games/
     math-castle-quest.js
     number-guessing.js
     rock-paper-scissors.js
+    sheep-dash.js
 styles/
   catalog.css
   games/
     math-castle-quest.css
     number-guessing.css
     rock-paper-scissors.css
+    sheep-dash.css
 ```
 
 ## Adding a game

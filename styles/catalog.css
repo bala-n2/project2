@@ -38,12 +38,14 @@ h1 { margin: 15px 0 0; font-size: 4.2rem; line-height: .98; letter-spacing: -.07
 .game-card { display: block; min-width: 0; overflow: hidden; border: 1px solid var(--line); background: var(--cream); transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease; animation: arrive .6s ease both; }
 .game-card:nth-child(2) { animation-delay: .1s; }
 .game-card:nth-child(3) { animation-delay: .2s; }
+.game-card:nth-child(4) { animation-delay: .3s; }
 .game-card:hover { transform: translateY(-4px); border-color: rgba(32, 34, 31, .4); box-shadow: 0 12px 30px rgba(32, 34, 31, .08); }
 .game-card:focus-visible { outline: 3px solid var(--coral); outline-offset: 4px; }
 .game-art { position: relative; display: grid; min-height: 228px; overflow: hidden; place-items: center; }
 .game-art--number { background: var(--lime); }
 .game-art--hands { background: var(--teal); }
 .game-art--math { background: #f2b893; }
+.game-art--sheep { background: #f0d889; }
 .art-label { position: absolute; top: 20px; left: 22px; z-index: 1; color: var(--ink); font-family: var(--mono); font-size: .64rem; text-transform: uppercase; }
 .number-board { display: grid; grid-template-columns: repeat(3, 52px); gap: 8px; transform: rotate(-7deg); }
 .number-tile { display: grid; width: 52px; aspect-ratio: 1; place-items: center; border: 1px solid rgba(32, 34, 31, .35); background: rgba(255, 253, 248, .74); font-family: var(--mono); font-size: .86rem; }
@@ -56,6 +58,9 @@ h1 { margin: 15px 0 0; font-size: 4.2rem; line-height: .98; letter-spacing: -.07
 .math-mark { display: flex; align-items: center; gap: 18px; transform: rotate(-5deg); }
 .castle-symbol { font-size: 5rem; line-height: 1; }
 .math-prompt { padding: 12px 15px; border: 1px solid var(--ink); background: var(--cream); font-family: var(--mono); font-size: 1.2rem; transform: rotate(8deg); }
+.sheep-mark { position: relative; z-index: 1; font-size: 5.5rem; transform: rotate(-7deg); }
+.sheep-trail { position: absolute; right: 20%; bottom: 62px; left: 20%; display: flex; justify-content: space-between; }
+.sheep-trail span { width: 18px; height: 8px; border-radius: 50%; background: rgba(32, 34, 31, .5); transform: rotate(-18deg); }
 .game-info { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 22px 24px 24px; }
 .game-title { margin: 0 0 7px; font-size: 1.22rem; line-height: 1.2; }
 .game-meta { color: var(--muted); font-family: var(--mono); font-size: .64rem; text-transform: uppercase; }
@@ -72,6 +77,7 @@ h1 { margin: 15px 0 0; font-size: 4.2rem; line-height: .98; letter-spacing: -.07
 	.game-art { min-height: 190px; }
 	.game-info { padding: 19px 18px 20px; }
 	.hand-token { width: 72px; font-size: 2.2rem; }
+	.sheep-trail { bottom: 50px; }
 	.footer { flex-direction: column; margin-top: 34px; }
 }
 @media (prefers-reduced-motion: reduce) {

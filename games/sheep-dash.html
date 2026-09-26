@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Help a speedy sheep leap over obstacles in this endless runner.">
+	<title>Sheep Dash | Common Ground</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../styles/games/sheep-dash.css">
+</head>
+<body>
+	<header class="shell">
+		<nav class="nav" aria-label="Main navigation">
+			<a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true"></span>common ground</a>
+			<a class="home-link" href="../index.html">Back to game shelf</a>
+		</nav>
+	</header>
+	<main class="shell">
+		<section class="runner" aria-labelledby="game-title">
+			<div class="page-heading">
+				<div>
+					<div class="eyebrow">Meadow run / 004</div>
+					<h1 id="game-title">Sheep Dash</h1>
+					<p class="intro">A breezy run through the hills. Keep those hooves moving.</p>
+				</div>
+				<div class="scoreboard" aria-label="Run distance">
+					<div><span class="score-label">Distance</span><strong id="distance-score">0</strong><span class="score-unit">m</span></div>
+					<div><span class="score-label">Best</span><strong id="best-score">0</strong><span class="score-unit">m</span></div>
+				</div>
+			</div>
+			<div class="scene" id="game-scene">
+				<canvas id="game-canvas" aria-label="A sheep runs across a meadow and jumps over rocks and fences." tabindex="0"></canvas>
+				<div class="overlay" id="game-overlay">
+					<div class="overlay-content">
+						<span class="overlay-kicker">HIGH SPEED / SOFT WOOL</span>
+						<h2 id="overlay-title">Ready to roam?</h2>
+						<p id="overlay-copy">Dodge the fences. Don't trip over the rocks.</p>
+						<button class="start-button" id="start-button" type="button">Start running</button>
+					</div>
+				</div>
+			</div>
+			<div class="game-controls">
+				<p class="control-hint" id="control-hint">SPACE / UP ARROW / TAP TO JUMP</p>
+				<button class="jump-button" id="jump-button" type="button" aria-label="Jump">Jump <span aria-hidden="true">↑</span></button>
+			</div>
+			<p class="run-status" id="run-status" role="status" aria-live="polite">Run is ready.</p>
+		</section>
+	</main>
+	<script src="../scripts/games/sheep-dash.js"></script>
+</body>
+</html>
