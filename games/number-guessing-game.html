@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Guess the hidden number in as few tries as you can.">
+	<title>Number Game | Common Ground</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../styles/games/number-guessing.css">
+</head>
+<body>
+	<header class="shell">
+		<nav class="nav" aria-label="Main navigation">
+			<a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true"></span>common ground</a>
+			<a class="home-link" href="../index.html">Back to home</a>
+		</nav>
+	</header>
+	<main class="shell">
+		<section class="game" aria-labelledby="game-title">
+			<div class="eyebrow">A little number puzzle</div>
+			<h1 id="game-title">Find the hidden number.</h1>
+			<p class="intro">I have a number in mind. Make a guess and I’ll tell you whether to go higher or lower.</p>
+			<div class="range"><strong>1–100</strong><span>Your number is somewhere in this range.</span></div>
+			<form id="guess-form">
+				<label for="guess-input">Your guess</label>
+				<div class="entry">
+					<input id="guess-input" name="guess" type="number" min="1" max="100" step="1" placeholder="Enter a number" required autofocus>
+					<button class="button" type="submit">Make a guess</button>
+				</div>
+			</form>
+			<p class="status" id="game-status" role="status" aria-live="polite">Ready when you are.</p>
+			<div class="stats"><span>Guesses: <strong id="guess-count">0</strong></span><span>Range: 1–100</span></div>
+			<button class="reset" id="reset-button" type="button">Start a new game</button>
+		</section>
+	</main>
+	<script src="../scripts/games/number-guessing.js"></script>
+</body>
+</html>

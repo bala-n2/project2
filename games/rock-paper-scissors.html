@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Play rock paper scissors against the computer.">
+	<title>Rock Paper Scissors | Common Ground</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../styles/games/rock-paper-scissors.css">
+</head>
+<body>
+	<header class="shell">
+		<nav class="nav" aria-label="Main navigation">
+			<a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true"></span>common ground</a>
+			<a class="home-link" href="../index.html">Back to home</a>
+		</nav>
+	</header>
+	<main class="shell">
+		<section class="arena" aria-labelledby="game-title">
+			<div class="eyebrow">A quick match</div>
+			<h1 id="game-title">Rock paper scissors.</h1>
+			<p class="intro">Choose your move. The computer will make a random choice.</p>
+			<div class="scoreboard" aria-label="Match score">
+				<div class="score"><span class="score-label">You</span><strong class="score-value" id="player-score">0</strong></div>
+				<div class="round-count">Round <span id="round-count">0</span></div>
+				<div class="score"><span class="score-label">Computer</span><strong class="score-value" id="computer-score">0</strong></div>
+			</div>
+			<div class="duel" aria-label="Round choices">
+				<div class="contestant">
+					<span class="contestant-name">Your move</span>
+					<div class="choice-display" id="player-display" aria-label="Your choice"><span>?</span></div>
+				</div>
+				<span class="versus" aria-hidden="true">VS</span>
+				<div class="contestant">
+					<span class="contestant-name">Computer</span>
+					<div class="choice-display" id="computer-display" aria-label="Computer choice"><span>?</span></div>
+				</div>
+			</div>
+			<div class="choices" aria-label="Choose rock, paper, or scissors">
+				<button class="choice-button" type="button" data-choice="rock"><span class="choice-symbol" aria-hidden="true">✊</span><span class="choice-name">Rock</span></button>
+				<button class="choice-button" type="button" data-choice="paper"><span class="choice-symbol" aria-hidden="true">✋</span><span class="choice-name">Paper</span></button>
+				<button class="choice-button" type="button" data-choice="scissors"><span class="choice-symbol" aria-hidden="true">✌</span><span class="choice-name">Scissors</span></button>
+			</div>
+			<p class="status" id="game-status" role="status" aria-live="polite">Pick a move to play.</p>
+			<div class="controls"><button class="reset" id="reset-button" type="button">Reset match</button></div>
+		</section>
+	</main>
+	<script src="../scripts/games/rock-paper-scissors.js"></script>
+</body>
+</html>

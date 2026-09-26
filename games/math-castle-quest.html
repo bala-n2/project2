@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Solve addition riddles and help your adventurer reach the castle.">
+	<title>Math Castle Quest | Common Ground</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../styles/games/math-castle-quest.css">
+</head>
+<body>
+	<header class="shell">
+		<nav class="nav" aria-label="Main navigation">
+			<a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true"></span>common ground</a>
+			<a class="home-link" href="../index.html">Back to game shelf</a>
+		</nav>
+	</header>
+	<main class="shell">
+		<section class="adventure" aria-labelledby="game-title">
+			<div class="game-top">
+				<h1 id="game-title">Math Castle Quest</h1>
+				<div class="progress-wrap">
+					<span class="progress-label" id="progress-label">Castle trail · 0 / 5</span>
+					<label class="sr-only" for="adventure-progress">Adventure progress</label>
+					<progress id="adventure-progress" max="5" value="0">0 of 5</progress>
+				</div>
+			</div>
+			<div class="world">
+				<svg id="adventure-world" viewBox="0 0 900 430" role="img" aria-labelledby="world-title world-description" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+					<title id="world-title">A path through the hills to a castle</title>
+					<desc id="world-description">A young adventurer faces a friendly monster on the path to a castle.</desc>
+					<defs>
+						<linearGradient id="sky-gradient" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#9ed5e8"/><stop offset="1" stop-color="#d9f0e8"/></linearGradient>
+						<linearGradient id="hill-gradient" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#98bd70"/><stop offset="1" stop-color="#6d9b5e"/></linearGradient>
+					</defs>
+					<rect width="900" height="430" fill="url(#sky-gradient)"/>
+					<circle cx="128" cy="95" r="39" fill="#f7df78"/>
+					<g fill="#fffdf8" opacity=".9">
+						<path d="M275 104c0-15 12-27 27-27 11 0 20 6 25 15 4-3 9-5 15-5 15 0 27 12 27 27H275z"/>
+						<path d="M565 76c0-12 10-22 22-22 9 0 17 5 21 13 4-3 8-4 13-4 12 0 22 10 22 22H565z"/>
+					</g>
+					<path d="M0 278c104-87 207-74 314-10 109-102 204-92 303-25 91-76 185-70 283 4v183H0z" fill="#b8d79a"/>
+					<path d="M0 327c123-83 251-55 364-8 137-93 251-83 354-21 70-38 127-37 182-12v144H0z" fill="url(#hill-gradient)"/>
+					<path d="M0 377c149-45 288-22 410-18 163-29 322-34 490-7v78H0z" fill="#5e8951"/>
+					<path d="M50 376c176-42 286-27 415-21s249-21 384-6" fill="none" stroke="#ead49a" stroke-width="28" stroke-linecap="round" opacity=".95"/>
+					<path d="M50 376c176-42 286-27 415-21s249-21 384-6" fill="none" stroke="#fff0c5" stroke-width="2" stroke-dasharray="4 14" stroke-linecap="round"/>
+					<g id="castle">
+						<rect x="713" y="188" width="138" height="151" fill="#f6d99a" stroke="#725d4b" stroke-width="4"/>
+						<path d="M704 191v-49h30v17h20v-17h30v49M780 191v-49h30v17h20v-17h30v49" fill="#df9568" stroke="#725d4b" stroke-width="4" stroke-linejoin="round"/>
+						<path d="M735 142v-36h48v36M811 142v-36h48v36" fill="#f6d99a" stroke="#725d4b" stroke-width="4"/>
+						<path d="M744 106h31v-21l-31 10zM820 106h31V85l-31 10z" fill="#ef7557" stroke="#725d4b" stroke-width="3" stroke-linejoin="round"/>
+						<path d="M764 339v-62a19 19 0 0 1 38 0v62" fill="#76564c" stroke="#725d4b" stroke-width="4"/>
+						<rect x="729" y="218" width="25" height="33" rx="12" fill="#a9d9e8" stroke="#725d4b" stroke-width="3"/>
+						<rect x="810" y="218" width="25" height="33" rx="12" fill="#a9d9e8" stroke="#725d4b" stroke-width="3"/>
+						<g class="castle-flag"><path d="M783 87V52" stroke="#725d4b" stroke-width="4"/><path d="M785 54h42l-11 12 11 12h-42z" fill="#ef7557" stroke="#725d4b" stroke-width="3" stroke-linejoin="round"/></g>
+					</g>
+					<g id="monster" transform="translate(438 267)">
+						<path d="M21 36 7 21l2 26M66 34l13-16-1 29" fill="#bd8bb8" stroke="#463b50" stroke-width="4" stroke-linejoin="round"/>
+						<path d="M16 67c-8-24-2-53 26-56 29-4 41 22 34 54l-5 38H20z" fill="#bd8bb8" stroke="#463b50" stroke-width="4"/>
+						<path d="M20 58 3 72M74 58l17 12" fill="none" stroke="#463b50" stroke-width="9" stroke-linecap="round"/>
+						<ellipse cx="32" cy="42" rx="7" ry="10" fill="#fffdf8"/><ellipse cx="59" cy="42" rx="7" ry="10" fill="#fffdf8"/>
+						<circle cx="34" cy="44" r="3.5" fill="#252b32"/><circle cx="57" cy="44" r="3.5" fill="#252b32"/>
+						<path d="M34 68q9 9 20 0" fill="none" stroke="#463b50" stroke-width="4" stroke-linecap="round"/>
+						<path d="M28 103v13m30-13v13" stroke="#463b50" stroke-width="8" stroke-linecap="round"/>
+					</g>
+					<g id="hero-character" transform="translate(100 0)">
+						<g class="body-bob">
+							<path class="leg-left" d="M33 360 27 387" fill="none" stroke="#37475b" stroke-width="10" stroke-linecap="round"/>
+							<path class="leg-right" d="M52 360 59 387" fill="none" stroke="#37475b" stroke-width="10" stroke-linecap="round"/>
+							<path d="M18 326q23-15 49 0l-5 39H23z" fill="#ef7557" stroke="#37475b" stroke-width="4" stroke-linejoin="round"/>
+							<path d="M21 333 6 351m60-18 13 15" fill="none" stroke="#37475b" stroke-width="8" stroke-linecap="round"/>
+							<path d="M24 392h-9m52 0h-9" stroke="#eac36a" stroke-width="8" stroke-linecap="round"/>
+							<circle cx="43" cy="302" r="22" fill="#e9b78e" stroke="#37475b" stroke-width="4"/>
+							<path d="M22 300q-2-26 23-27 20 1 20 23l-12-9-13 6-16-2" fill="#5b453c"/>
+							<circle cx="36" cy="304" r="2.5" fill="#252b32"/><circle cx="50" cy="304" r="2.5" fill="#252b32"/>
+							<path d="M38 314q5 4 10 0" fill="none" stroke="#a6564e" stroke-width="2" stroke-linecap="round"/>
+						</g>
+					</g>
+					<g fill="#f7df78"><path d="m206 203 5 12 13 1-10 8 3 13-11-7-11 7 3-13-10-8 13-1z"/><path d="m658 91 4 9 10 1-8 6 2 10-8-5-8 5 2-10-8-6 10-1z"/></g>
+				</svg>
+			</div>
+			<section class="challenge" aria-labelledby="question-title">
+				<div class="riddle-intro">
+					<span class="monster-badge" aria-hidden="true">👾</span>
+					<div><p class="riddle-label">Monster's riddle</p><p class="riddle-copy" id="question-title">Solve it to keep going!</p></div>
+				</div>
+				<div class="question-area">
+					<p class="equation" id="equation">7 + 8 = ?</p>
+					<div class="answer-options" id="answer-options" aria-label="Choose your answer"></div>
+					<p class="game-status" id="game-status" role="status" aria-live="polite">Pick the right answer to continue.</p>
+				</div>
+			</section>
+			<div class="game-actions"><button class="restart" id="restart-button" type="button" hidden>Try again</button></div>
+		</section>
+	</main>
+	<script src="../scripts/games/math-castle-quest.js"></script>
+</body>
+</html>
