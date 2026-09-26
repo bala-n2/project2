@@ -12,12 +12,14 @@ games/
   number-guessing-game.html
   rock-paper-scissors.html
   sheep-dash.html
+  sudoku.html
 scripts/
   games/
     math-castle-quest.js
     number-guessing.js
     rock-paper-scissors.js
     sheep-dash.js
+    sudoku.js
 styles/
   catalog.css
   games/
@@ -25,6 +27,7 @@ styles/
     number-guessing.css
     rock-paper-scissors.css
     sheep-dash.css
+    sudoku.css
 ```
 
 ## Adding a game

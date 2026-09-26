@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Play Sudoku with 4 by 4 or 9 by 9 boards and easy or medium puzzles.">
+	<title>Sudoku | Common Ground</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../styles/games/sudoku.css">
+</head>
+<body>
+	<header class="shell">
+		<nav class="nav" aria-label="Main navigation">
+			<a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true"></span>common ground</a>
+			<a class="home-link" href="../index.html">Back to game shelf</a>
+		</nav>
+	</header>
+	<main class="shell">
+		<section class="sudoku-app" aria-labelledby="game-title">
+			<header class="page-heading">
+				<div>
+					<div class="eyebrow">A little logic</div>
+					<h1 id="game-title">Sudoku</h1>
+				</div>
+				<div class="stats" aria-label="Puzzle statistics">
+					<div><span>Time</span><strong id="timer">00:00</strong></div>
+					<div><span>Mistakes</span><strong id="mistakes">0</strong></div>
+				</div>
+			</header>
+			<div class="settings-bar">
+				<fieldset class="setting-group">
+					<legend>Board size</legend>
+					<div class="segmented">
+						<label><input type="radio" name="board-size" value="4" checked><span>4 x 4</span></label>
+						<label><input type="radio" name="board-size" value="9"><span>9 x 9</span></label>
+					</div>
+				</fieldset>
+				<fieldset class="setting-group">
+					<legend>Difficulty</legend>
+					<div class="segmented">
+						<label><input type="radio" name="difficulty" value="easy" checked><span>Easy</span></label>
+						<label><input type="radio" name="difficulty" value="medium"><span>Medium</span></label>
+					</div>
+				</fieldset>
+				<button class="new-puzzle" id="new-puzzle" type="button">New puzzle <span aria-hidden="true">↻</span></button>
+			</div>
+			<div class="play-area">
+				<div class="board-wrap">
+					<div class="board" id="sudoku-board" role="grid" aria-label="4 by 4 Sudoku board"></div>
+					<p class="board-hint">Select a square, then choose a number.</p>
+				</div>
+				<aside class="number-panel" aria-label="Number controls">
+					<div class="panel-heading"><span>Numbers</span><span class="keyboard-hint">1 - 4</span></div>
+					<div class="number-pad" id="number-pad"></div>
+					<button class="erase-button" id="erase-cell" type="button">Erase square</button>
+				</aside>
+			</div>
+			<p class="game-status" id="game-status" role="status" aria-live="polite">A fresh puzzle is ready.</p>
+		</section>
+	</main>
+	<dialog class="completion-screen" id="completion-screen" aria-labelledby="completion-title">
+		<span class="sparkle sparkle-one" aria-hidden="true">+</span>
+		<span class="sparkle sparkle-two" aria-hidden="true">+</span>
+		<span class="sparkle sparkle-three" aria-hidden="true">+</span>
+		<div class="completion-content">
+			<div class="achievement-medal" aria-hidden="true"><span>★</span></div>
+			<p class="achievement-label">Achievement unlocked</p>
+			<h2 id="completion-title">Puzzle complete!</h2>
+			<p class="completion-copy" id="completion-copy">You earned a Logic Star.</p>
+			<div class="completion-summary">
+				<div><span>Board</span><strong id="completion-size">4 x 4</strong></div>
+				<div><span>Time</span><strong id="completion-time">00:00</strong></div>
+				<div><span>Mistakes</span><strong id="completion-mistakes">0</strong></div>
+			</div>
+			<div class="completion-actions">
+				<button class="completion-primary" id="play-again" type="button">Play another</button>
+				<button class="completion-secondary" id="review-board" type="button">Review board</button>
+			</div>
+		</div>
+	</dialog>
+	<script src="../scripts/games/sudoku.js"></script>
+</body>
+</html>
